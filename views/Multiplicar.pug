@@ -1,0 +1,10 @@
+extends layout
+
+block content
+    h1 Tabla de multiplicar
+    form(action='/Multiplicar/resultado' method='POST')
+        div
+            label(for='') &iquest;Base de la multiplicacion?
+            input#base(type='text' name='base')
+        input(type='submit' value='Enviar')
+    

@@ -1,0 +1,25 @@
+extends layout
+
+block content
+    .container
+        .modal#myModal(tabindex='-1')
+            .modal-dialog
+                .modal-content
+                    .modal-header
+                        h5.modal-title Ventana modal
+                        button.btn-close(type='button' data-bs-dismiss='modal' aria-label='Close')
+                    .modal-body
+                        p pulsa X para cerrar la ventana
+        .container 
+            .card
+                img.card-img-top(src='https://www.venta-plotter.es/wp-content/uploads/2020/04/asistencia-telefonica.png' alt='...' style='max-height: 200px; max-width: 500px; object-fit: cover;')
+                .card-body
+                    h5.card-title Servicio Tecnico
+                    p.card-text
+                        | contacta con el servicio tecnico
+                    a.btn.btn-primary(href='#') Contactar
+    script.
+        document.addEventListener('DOMContentLoaded', function () {
+        var myModal = new bootstrap.Modal(document.getElementById('myModal'), { backdrop: 'static', keyboard: false });
+        myModal.show();
+        });
